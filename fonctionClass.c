@@ -7,7 +7,7 @@ void printHelp () {
   printf ("b: b(x) = x*x*x\n");
   printf ("c: c(x) = x^2 + 2*x + 7\n");
   printf ("d: shrink(x) = x/2\n"); // add Brian Miranda
-  printf ("e: average() \n");
+  printf ("e: average(x) = x is the number of values for the calculation\n");
   printf ("q: quit\n");
 }
 
@@ -35,14 +35,14 @@ void shrink(float x)// add Brian Miranda
 
 // My function choice is the average of a giving numbers.
 
-void average ()
+void average (float x)
 {
   int amount ,i;
   float values, sum, avrg;
+  amount = x; // assign the value of x to amount.
     
-  printf ("Enter the amount of values that are goin to be calculated.\n");
+  printf ("Enter the %d values that are goin to be calculated.\n\n", amount);
   printf("amount: ");
-  scanf ("%d", &amount);
   //initialize variable
   sum = 0;
 
@@ -65,19 +65,18 @@ int menu () {
   printHelp ();
   scanf ("%s", &selection);
   if (selection == 'q') return 1;
-  // plase this if statement before scanf
-  // to avoid the program to hang and return 5
-  // so the while statement continues.
-  if (selection == 'e') average(); return 5;
   scanf ("%f", &x);
   if (selection == 'a') a(x);
   if (selection == 'b') b(x);
   if (selection == 'c') c(x);
-  if (selection == 'd') shrink(x); // add Brian Miranda
+  if (selection == 'd') shrink(x); // shrink selection in the menu.
+  if (selection == 'e') average(x); // x is the amount of values.
 
-  return 5; // change - Brian Miranda change 
+  return 5; // use the return 5 as the control value.
   // the return value for wile loop.
-} // end function menu
+ // end function menu
+
+}
 
 int main() {
   while (menu() == 5); // change Brian Miranda
