@@ -6,6 +6,7 @@
 
 #include <stdio.h>
 
+
 void printHelp () {
   printf ("\n");
   printf ("a: a(x) = x*x\n");
