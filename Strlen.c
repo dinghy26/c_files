@@ -10,6 +10,6 @@ int main() {
  
    len = strlen(str);
  
-   printf("\nLength of Given String : %d\n", len);
+   printf("\nLength of Given String : %d\n\n", len);
    return(0);
 }
