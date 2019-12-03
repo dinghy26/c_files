@@ -21,7 +21,7 @@ int main() {
       printf("\na[%d]=%d", i, arr[i]);
 
    //Printing of total
-   printf("\nSum=%d", sum);
+   printf("\nSum=%d\n", sum);
 
    return (0);
 }
