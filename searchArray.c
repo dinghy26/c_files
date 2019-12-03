@@ -25,7 +25,7 @@ int main() {
    if (i < num) {
       printf("Number found at the location = %d\n", i + 1);
    } else {
-      printf("Number not found\n");
+      printf("Number not found\n\n");
    }
  
    return (0);
